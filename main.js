@@ -3,18 +3,20 @@ let darkMode = localStorage.getItem('darkMode');
 let icon = document.querySelector('#icon');
 console.log(darkModeToggler)
 
+// enable darkmode function
 const enableDarkMode = () => {
     document.body.classList.add('darkmode');
 
     localStorage.setItem('darkMode', 'enabled')
 }
-
+// disable darkmode function
 const disableDarkMode = () => {
     document.body.classList.remove('darkmode');
 
     localStorage.setItem('darkMode', null)
 }
 
+//
 if (darkMode === 'enabled') {
     enableDarkMode();
     icon.src ="/images/sun2.png"
