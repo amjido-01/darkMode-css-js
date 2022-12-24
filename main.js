@@ -16,12 +16,13 @@ const disableDarkMode = () => {
     localStorage.setItem('darkMode', null)
 }
 
-//
+// checking the browser last theme history
 if (darkMode === 'enabled') {
     enableDarkMode();
     icon.src ="/images/sun2.png"
 }
 
+// main toggler function
 darkModeToggler.addEventListener('click', () => {
     darkMode = localStorage.getItem('darkMode');
     if (darkMode !== 'enabled'){
